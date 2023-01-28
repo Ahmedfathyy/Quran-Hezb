@@ -1,0 +1,19 @@
+
+<head>
+    <link rel="stylesheet" href="./css/styleassigned.css">
+</head>
+<body>
+    <h1 id="assigned-hezb"></h1>
+    <script>
+        let fromHezb = <%= fromHezb %> 
+        let toHezb = <%= toHezb %>
+        localStorage.setItem("fromHezb", fromHezb);
+        localStorage.setItem("toHezb", toHezb);
+        if (fromHezb == null || toHezb == null) {
+            fromHezb = localStorage.getItem("fromHezb");
+            toHezb = localStorage.getItem("toHezb");
+
+        }
+        document.getElementById("assigned-hezb").innerHTML = `You are assigned Hezbs from ${fromHezb} to ${toHezb}`;
+    </script>
+</body>

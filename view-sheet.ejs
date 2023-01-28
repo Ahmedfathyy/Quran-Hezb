@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Sheet</title>
+    <link rel="stylesheet" type="text/css" href="./css/table.css">
+</head>
+<body>
+    <h1>View Sheet</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>From Hezb</th>
+            <th>To Hezb</th>
+        </tr>
+        <% for (let i = 0; i < data.length; i++) { %>
+            <tr>
+                <td><%= data[i].name %></td>
+                <td><%= data[i].fromHezb %></td>
+                <td><%= data[i].toHezb %></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
